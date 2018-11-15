@@ -1,0 +1,2 @@
+wifi:iminicam
+pwd:12345678
