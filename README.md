@@ -9,6 +9,7 @@ CDROM      : Files that have been cloned or obtained form the accompanying CD-RO
 cam_src    : Files that have been cloned or obtained from the camera itself
 datasheets : Datasheets regarding (parts of) the camera board
 tools      : Misc. tools that are useful for the RE process
+```
 
 ## Tools
 
