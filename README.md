@@ -11,8 +11,8 @@ datasheets : Datasheets regarding (parts of) the camera board
 tools      : Misc. tools that are useful for the RE process
 ```
 
-## Tools
+## Open-Source Tools
 
-* `radare2`: Assembly dissasembler
-* `Cutter`: GUI for radare
-* `veles`: Conti di/trigraph visualization software package
+* `radare2`: [link](https://rada.re/r/) Assembly dissasembler
+* `Cutter`: [link](https://github.com/radareorg/cutter) GUI for radare
+* `veles`: [link](https://github.com/codilime/veles) Conti di/trigraph visualization software package
