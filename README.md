@@ -9,6 +9,7 @@ CDROM      : Files that have been cloned or obtained form the accompanying CD-RO
 cam_src    : Files that have been cloned or obtained from the camera itself
 datasheets : Datasheets regarding (parts of) the camera board
 tools      : Misc. tools that are useful for the RE process
+meta       : Data about the data.  e.g. Maltego graphs
 ```
 
 ## Open-Source Tools
@@ -16,3 +17,7 @@ tools      : Misc. tools that are useful for the RE process
 * `radare2`: [link](https://rada.re/r/) Assembly dissasembler
 * `Cutter`: [link](https://github.com/radareorg/cutter) GUI for radare
 * `veles`: [link](https://github.com/codilime/veles) Conti di/trigraph visualization software package
+
+## Closed-Source Tools
+
+* `Maltego CE`: [link](https://www.paterva.com/web7/community/community.php) Graphing how different elements function together and analysing links
