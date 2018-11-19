@@ -5,7 +5,7 @@
 "http://192.168.10.1:80/media/?action=cmd&code=' + ID + '&value=' + arg + "&user=admin&pwd="
 ```
 
-
+# Commands
 
 | Command ID | Caller name  | Arguments |
 | ---------- | ------------ | --------- |

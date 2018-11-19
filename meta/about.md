@@ -11,7 +11,7 @@
 * HTTP Password: (empty)
 
 ## Webserver
-* Default port: `80/tcp`
+ * Default port: `80/tcp`
 
 ## Open ports
 * `80/tcp` with service `http`
