@@ -1,6 +1,13 @@
 # IPCam /media/ commands
+## Call format:
 
-| Command ID | Name (maybe) | Arguments |
+```
+"http://192.168.10.1:80/media/?action=cmd&code=' + ID + '&value=' + arg + "&user=admin&pwd="
+```
+
+
+
+| Command ID | Caller name  | Arguments |
 | ---------- | ------------ | --------- |
 | 1          | `pzt_up`     |           |
 | 2          | `pzt_down`   |           |
