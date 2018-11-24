@@ -2,6 +2,9 @@
 
 In this repo lives everything we know, have pulled off of, and plan to push onto a cheap Chinese IP Camera.  If I ever acquire the link for purchasing the camera, I will put it here.  Until then, I don't know where it came from.
 
+![img1](https://github.com/UND-ARC/IPCam/blob/master/side_1.jpg)
+![img2](https://github.com/UND-ARC/IPCam/blob/master/side_2.jpg)
+
 ## General Structure
 
 ```
@@ -11,6 +14,8 @@ datasheets : Datasheets regarding (parts of) the camera board
 tools      : Misc. tools that are useful for the RE process
 meta       : Data about the data.  e.g. Maltego graphs
 ```
+
+Check out the `meta` folder for more information about the camera, such as MAC address/related links/etc.
 
 ## Open-Source Tools
 
