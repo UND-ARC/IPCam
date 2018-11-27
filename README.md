@@ -1,6 +1,6 @@
 # Chinese IP Camera Information Repository
 
-In this repo lives everything we know, have pulled off of, and plan to push onto a cheap Chinese IP Camera.
+In this repo lives everything we know, have pulled off of, and plan to push onto a cheap Chinese IP Camera.  To avoid clogging the README with irrelevant information, more data about the camera can be found in the [meta](https://github.com/UND-ARC/IPCam/tree/master/meta) directory.
 
 This appears to be the same camera as what I have: [Amazon link](https://www.amazon.com/DigiHero-Security-Detection-Office-Support-Android/dp/B077H3XRNM)
 
