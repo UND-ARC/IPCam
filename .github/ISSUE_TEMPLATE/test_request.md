@@ -1,3 +1,9 @@
+---
+name: Test Request
+about: A request to run some tests on some unit
+
+---
+
 **This is a request for information issue**
 
 I would like to know [what happens when/the value of/the contents of/other] *something*.
