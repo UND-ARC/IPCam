@@ -14,7 +14,13 @@
  * Default port: `80/tcp`
 
 ## Open ports
+
+When running in AP (Access Point) mode:
 * `80/tcp` with service `http`
 * `53/udp` with service `domain`
 * `67/udp` with service `dhcps`
 * `10000/udp` with service `ndmp`
+
+When running in network (client) mode:
+* `80/tcp` with service `http`
+* `10213/tcp` with unknown service (seems to be listen-only)
