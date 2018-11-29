@@ -35,11 +35,11 @@ When running in network (client) mode:
 *By default*, the camera seems to use the following P2P settings:
 
 * P2P Enabled
-* Servers:
+* Servers: (cam checks servers in this order)
     * `120.27.7.78`
     * `47.88.9.191`
-    * `hzqd.mycamdns.com`
-    * `hzusa.mycamdns.com`
+    * `hzqd.mycamdns.com` (resolves to `120.27.7.78`)
+    * `hzusa.mycamdns.com` (resolves to `47.88.9.191`)
 * UID: `CH1D8D8-C3C497C12E2F-62E914` (same as cam UID)
 * Password: `8888`
 
