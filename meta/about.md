@@ -43,3 +43,8 @@ When running in network (client) mode:
 * UID: `CH1D8D8-C3C497C12E2F-62E914` (same as cam UID)
 * Password: `8888`
 
+## Hardware
+See [datasheets folder](https://github.com/UND-ARC/IPCam/tree/master/datasheets) for datasheets where known.
+* HiSilicon Hi3518 SoC ([#1](https://github.com/UND-ARC/IPCam/issues/1) for identification)
+* Winhand 25Q64FVSIQ 64Mb SPI flash
+* MediaTek MT7601U 802.11 b/g/n WiFi adapter
