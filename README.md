@@ -23,7 +23,7 @@ Check out the `meta` folder for more information about the camera, such as MAC a
 
 * `radare2`: [link](https://rada.re/r/) Assembly dissasembler
 * `Cutter`: [link](https://github.com/radareorg/cutter) GUI for radare
-* `veles`: [link](https://github.com/codilime/veles) Conti di/trigraph visualization software package
+* `veles`: [link](https://github.com/wapiflapi/veles) Conti di/trigraph visualization software package
 
 ## Closed-Source Tools
 
