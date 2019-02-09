@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/clr_devMnuBg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layClose" android:background="@color/clr_devMnuTitleBg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/mnuClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_close" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/mnuDel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_del" />
+            <TextView android:id="@id/lbMnuDel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_delete" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/mnuEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_edit" />
+            <TextView android:id="@id/lbMnuEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_edit" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/mnuCfg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_cfg" />
+            <TextView android:id="@id/lbMnuCfg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Settings" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/mnuSnapshot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_cut" />
+            <TextView android:id="@id/lbmnuSnapshot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Snapshot" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/mnuRec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_rec" />
+            <TextView android:id="@id/lbmnuRec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Rec" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/mnuAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mnu_alm" />
+            <TextView android:id="@id/lbmnuAlm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Alarm" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

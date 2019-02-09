@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="17.0sp" android:id="@id/tvNetAndPass" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_SetPWDaNet" />
+                    <TextView android:textSize="17.0sp" android:id="@id/tvSetupNote" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld_bigger" android:layout_marginTop="@dimen/actBar_mgSld_top" android:layout_marginRight="@dimen/actBar_mgSld_bigger" android:text="@string/str_SetupNote" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                        <TextView android:textSize="15.0sp" android:id="@id/lbSSID" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_SSID" android:layout_weight="1.0" />
+                        <LinearLayout android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0">
+                            <Spinner android:id="@id/edSSID" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                            <ImageButton android:id="@id/btnRefresh" android:background="@drawable/btn_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_Pwd" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edPwd" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/str_Pwd" android:ems="10" android:layout_weight="3.0" android:inputType="textVisiblePassword" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                    <CheckBox android:id="@id/chkShowPwd" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_ShowPassword" android:layout_weight="2.73" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:textSize="17.0sp" android:textColor="@color/clr_Blue" android:id="@id/btnSetupCamWIFI" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_StartsetupWIFI" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <ProgressBar android:id="@id/prgBar" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?android:attr/progressBarStyleHorizontal" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0sp" android:gravity="center" android:id="@id/lbShowProg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+                <TextView android:textSize="17.0sp" android:id="@id/m_lbCfgStpCfg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/str_CamSetupCfg" />
+                <TextView android:textSize="17.0sp" android:id="@id/m_lbCfgStp3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/str_saveSetup" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:textSize="17.0sp" android:textColor="@color/clr_Blue" android:id="@id/btnSave" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Next" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

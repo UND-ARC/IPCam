@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strfun_ddns_cfg" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/clr_tool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Help" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="center" android:id="@id/lbDDNS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:text="@string/str_emb_ddns_cfg" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbEnbDDNS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_enb_ddns" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkEnableDDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbPort" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ddns_port" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edDDNSPort" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                    <TextView android:gravity="center|right|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_reboot_need" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbURL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_URL" android:layout_weight="1.0" />
+                    <TextView android:id="@id/lbURLDDNS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                    <TextView android:id="@id/lbURLIP" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/clr_Red" android:gravity="right" android:id="@id/lbEnbDDNSStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="..." />
+                </LinearLayout>
+                <LinearLayout android:background="@color/clr_White" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/grp_TopMg">
+                    <TextView android:gravity="center" android:id="@id/lbThdDDNS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:text="@string/str_ddns_3d" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbDDNSPrd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ddns_provider" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selDDNSPrd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAccount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ddns_account" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edDDNSAccount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="text" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ddns_passwd" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edDDNSPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textPassword" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbDomain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ddns_domain" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edDomain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="text" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/clr_Red" android:id="@id/lbThdDDNSStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="..." />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

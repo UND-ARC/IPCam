@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layTitle" android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_fun_cloud" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <Button android:id="@id/btnHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Help" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layTools" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <Button android:id="@id/btnScan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_use_cloud_keyscan" />
+        <Button android:id="@id/btnInput" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_use_cloud_keyinput" />
+        <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg" android:text="@string/str_Cancel" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layTools" android:layout_below="@id/layTitle">
+        <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_fun_sev_time" android:layout_weight="2.0" />
+                <EditText android:enabled="false" android:id="@id/edEndTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_use_cloudsev" android:layout_weight="1.0" />
+                <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkCloudEnb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_rec_voice" android:layout_weight="1.0" />
+                <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkRecVoice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:text="@string/str_use_cloud_keys" android:layout_weight="1.0" />
+            <ListView android:id="@id/lstKey" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

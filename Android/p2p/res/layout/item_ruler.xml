@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.g_zhang.p2pComm.TimeLine.EsnTimeLineItemView android:id="@id/riv_ruler_item" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:id="@id/ll_next_day_tip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_right" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_drag_left" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_tip_right" android:layout_width="120.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_next_day" />
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:id="@id/ll_last_day_tip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_tip_left" android:layout_width="120.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_last_day" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_left" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_drag_right" />
+    </LinearLayout>
+</RelativeLayout>

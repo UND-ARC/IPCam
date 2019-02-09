@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strfun_alarm" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <LinearLayout android:id="@id/layMoveDet" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbMoveDetLevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_alm_movedet" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selSSID" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmInput" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbInpPortAlarm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/input_port_alm" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selInpAlm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmVoice" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmVoice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_SoundDet" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selAlmVoc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/llTempeSettings" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <TextView android:id="@id/lbTempeUnit" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_TempeUnit" android:layout_weight="1.0" />
+                        <RadioGroup android:orientation="horizontal" android:id="@id/rgTemperatureType" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RadioButton android:layout_gravity="center_horizontal" android:id="@id/rbCelsius" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableLeft="@drawable/selecotor_btn_celsius" />
+                            <RadioButton android:layout_gravity="center_horizontal" android:id="@id/rbFahrenheit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableLeft="@drawable/selecotor_btn_fahrenheit" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <TextView android:id="@id/lbAlmTempe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_TempeDet" android:layout_weight="1.0" />
+                        <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmTempe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_AlmSch" />
+                    </LinearLayout>
+                    <FrameLayout android:orientation="vertical" android:id="@id/layAlmTempe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/llHighLowTempeSetting" android:background="#ffe5e5e5" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                            <LinearLayout android:id="@id/layInputMethodAbove" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_LiveTempeAbove" android:layout_weight="1.0" />
+                                <EditText android:gravity="center|right" android:id="@id/etTempeAbove" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="4" android:layout_weight="1.0" android:inputType="numberDecimal|numberSigned" android:imeOptions="actionDone" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_LiveTempeBelow" android:layout_weight="1.0" />
+                                <EditText android:gravity="center|right" android:id="@id/etTempeBelow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="4" android:layout_weight="1.0" android:inputType="numberDecimal|numberSigned" android:imeOptions="actionDone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View android:id="@id/vTempeAlmShade" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmSch" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/tv_AlmSch" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_AlmSch" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmSch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_AlmSch" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/layTimingAlmShow" android:background="@color/clr_White" android:padding="@dimen/actBar_mgSld" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginRight="@dimen/actBar_mgSld">
+                    <Button android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/startTiming" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="2" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow" />
+                    <Button android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/endTiming" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="2" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmPIRCfg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmPIR" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_AlmPIR" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmPIR" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmPIRLev3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmPIRLev3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_AlmPIR" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selPirLev3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlm433M" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlm433M" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_wireless_sensor" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlm433M" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmGas" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmGas" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_DevGas" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmGas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+                <LinearLayout android:background="@color/clr_tabbg" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmOutIO" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmIOOut" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_alm_io_out" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmOut" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_alm_io_out" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmWarnTone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmWarnTone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_voice_alarm" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmWarnTone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_voice_alarm" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmEmail" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmEMail" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_email_alm" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmEMail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_email_alm" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmFTP" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlmFTP" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ftp_upload" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkAlmFTP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_ftp_upload" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layAlmPreset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbGotoPreset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_alm_ptz_pos" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selPreset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlarmInterval" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_alm_interval" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edAlmInterv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/str_alm_interval_tip" android:ems="10" android:layout_weight="1.0" android:inputType="numberSigned|phone|textCapCharacters" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/grp_TopMg">
+                    <TextView android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:id="@id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_alm_interval_tip" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layRecvAlmMsg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRecvAlmMsg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_RecvAlmMsg" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkRecvAlmMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_osd" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layOSD" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbOSD" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_osd" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkOSD" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" android:contentDescription="@string/str_osd" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

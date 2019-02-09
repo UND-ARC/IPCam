@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strfun_irledcfg" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/clr_tool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Help" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioGroup android:orientation="horizontal" android:id="@id/radioGroup1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/rdClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Close" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rdAuto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Auto" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rdSch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Sch" android:layout_weight="1.0" />
+            </RadioGroup>
+            <LinearLayout android:orientation="vertical" android:id="@id/layIRAuto" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/lbMoveDetLevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/actBar_mgSld" android:text="@string/str_iropen_level" android:layout_weight="1.0" />
+                </LinearLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/str_dark" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                    <TextView android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_level_normal" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                    <TextView android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/str_bright" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <SeekBar android:id="@id/sekLevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:max="99" android:progress="0" />
+                <TextView android:gravity="right" android:layout_gravity="right" android:id="@id/lbAlarmLevel" android:layout_width="352.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tool_spl" android:text="TextView" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/laySch" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnStartTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Button" />
+                <Button android:id="@id/btnEndTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tool_top" android:text="Button" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layOK" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

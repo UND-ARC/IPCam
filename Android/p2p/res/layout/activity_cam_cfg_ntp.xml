@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strfun_time_setting" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/clr_tool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Help" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbCurrentTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/strntp_current_time" android:layout_weight="2.0" />
+                    <EditText android:id="@id/edCurrentTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:editable="false" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/llTimeMode" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbTimeMode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/strntp_timemode" android:layout_weight="2.0" />
+                    <Spinner android:id="@id/selTimeMode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbTimeZone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/strntp_timezone" android:layout_weight="2.0" />
+                    <Spinner android:id="@id/selTimeZone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/layTimeSev" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbTimeSev" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/strntp_server" android:layout_weight="2.0" />
+                    <Spinner android:id="@id/selTimeSev" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/llDST" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="right" android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/time_dst" android:layout_weight="3.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkDST" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+                <Button android:id="@id/btnTimeSync" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg" android:text="@string/strntp_sync_app" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

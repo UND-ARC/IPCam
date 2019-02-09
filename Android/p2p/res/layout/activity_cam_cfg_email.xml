@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strfun_email_cfg" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/clr_tool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Help" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbSender" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_sender" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edSender" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRecv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_Recipient" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edRecv1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRecv2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edRecv2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRecv3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edRecv3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRecv4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edRecv4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbSmtp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_smtp_sev" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edSmtpSev" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbSmtpPort" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_smtp_port" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edSmtpPort" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbTSL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_smtp_stl" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selTSL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0sp" android:id="@id/lbTSLTips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginBottom="@dimen/actBar_mgSld" android:text="@string/str_gmail_tips" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbSmtpUser" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_smtp_usr" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edSmtpUser" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbSmtpPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_smtp_pwd" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edSmtpPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="textPassword" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/clr_Red" android:id="@id/lbTestRes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="..." />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/grp_TopMg">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

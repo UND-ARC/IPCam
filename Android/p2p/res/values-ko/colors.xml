@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="clr_Blue">#ff0000ff</color>
+    <color name="clr_NULL">#00000000</color>
+    <color name="clr_Red">#ffff0000</color>
+    <color name="clr_TitleBar">#ff333333</color>
+    <color name="clr_livetool_bg">#ff333333</color>
+    <color name="clr_splt">#ff666666</color>
+    <color name="clr_ToolBg">#ffcccccc</color>
+    <color name="clr_ToolSel">#ff6699cc</color>
+</resources>

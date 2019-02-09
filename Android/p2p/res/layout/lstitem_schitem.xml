@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgLogo" android:layout_width="72.0dip" android:layout_height="50.0dip" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginTop="@dimen/tooltop_vertical_margin" android:src="@drawable/sch_week" android:scaleType="center" android:contentDescription="@string/str_Snapshot" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/lbRGBClr" android:background="@color/clr_livetool_bg" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="@dimen/tool_spl" android:text="    " android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/imgLogo" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/sz_title_txt" android:textStyle="bold" android:textColor="@color/clr_Black" android:id="@id/lbItemName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/toolleft_horizontal_margin" android:text="@string/str_Name" android:contentDescription="@string/str_Name" />
+        <TextView android:textSize="@dimen/txt_nor" android:textColor="@color/clr_TitleBar" android:id="@id/lbItemDet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Name" android:contentDescription="@string/str_Name" />
+    </LinearLayout>
+</RelativeLayout>

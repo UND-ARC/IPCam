@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgRecLogo" android:layout_width="72.0dip" android:layout_height="50.0dip" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginTop="@dimen/tooltop_vertical_margin" android:layout_marginRight="@dimen/toolleft_horizontal_margin" android:src="@drawable/img_rec_spl" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/str_Snapshot" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_toRightOf="@id/imgRecLogo" android:layout_centerVertical="true">
+        <TextView android:textSize="12.0sp" android:textColor="@color/clr_Black" android:id="@id/lbMoveDetLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Name" android:contentDescription="@string/str_Name" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="11.0sp" android:id="@id/lbRecFile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_UID" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/clr_Blue" android:id="@id/lbItemStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Status" />
+        <ProgressBar android:id="@id/prgDownload" android:layout_width="fill_parent" android:layout_height="8.0dip" android:max="100" android:progress="50" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+</RelativeLayout>

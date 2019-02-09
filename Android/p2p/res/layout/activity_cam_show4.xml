@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title_txt" android:textColor="@color/clr_White" android:id="@id/lbWin4Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_LiveVideo" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgWin1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tool_rht_mg" android:src="@drawable/btn_win1" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgRefresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tool_rht_mg" android:src="@drawable/refresh" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/FrameLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/layShowWin" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.g_zhang.p2pComm.LayCamShow android:id="@id/camShow_Win1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.g_zhang.p2pComm.LayCamShow android:id="@id/camShow_Win2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.g_zhang.p2pComm.LayCamShow android:id="@id/camShow_Win3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.g_zhang.p2pComm.LayCamShow android:id="@id/camShow_Win4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/layLiveTools" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/flttool_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="100.0">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/imgToolClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="5.0dip">
+                    <ImageView android:id="@id/imgToolSetup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/tool_setup" />
+                    <ImageView android:id="@id/imgToolDel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tool_del" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

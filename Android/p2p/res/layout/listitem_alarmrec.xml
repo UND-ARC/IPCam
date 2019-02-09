@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/txt_nor" android:id="@id/lbAlmMsg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginTop="@dimen/tool_spl" android:text="TextView" android:layout_weight="1.0" />
+        <ImageView android:id="@id/imgNotRead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/lb_rdot" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/txt_sml" android:textColor="@color/clr_Blue" android:id="@id/lbAlmTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:text="TextView" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tool_spl">
+        <RelativeLayout android:id="@id/imgLay1" android:layout_width="0.0dip" android:layout_height="70.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/imgAlmRec1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/img_cam_spl" />
+            <ImageView android:id="@id/imgSel1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/mnu_seln" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/imgLay2" android:layout_width="0.0dip" android:layout_height="70.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/imgAlmRec2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/img_cam_spl" />
+            <ImageView android:id="@id/imgSel2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/mnu_seln" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/imgLay3" android:layout_width="0.0dip" android:layout_height="70.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/imgAlmRec3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/img_cam_spl" />
+            <ImageView android:id="@id/imgSel3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/mnu_seln" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

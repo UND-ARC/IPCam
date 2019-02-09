@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbSehCamera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_WIFISetup" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/m_layCnntAP" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <TextView android:textSize="16.0sp" android:id="@id/m_lbCfgStp1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/str_CamWifiSetup1" />
+                <ImageView android:id="@id/img_PhnWifi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/phn_wifi" />
+                <TextView android:textSize="16.0sp" android:id="@id/m_lbCfgStp1Tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/str_getCameraAP" />
+                <Button android:textSize="16.0sp" android:textColor="@color/clr_Blue" android:id="@id/btnCnntAP" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/str_connectCameraAP" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

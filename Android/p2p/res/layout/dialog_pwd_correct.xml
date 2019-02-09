@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/LinearLayout1" android:padding="@dimen/actBar_mgSld" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/clr_White" android:id="@id/tvPwd" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Pwd" />
+    <EditText android:id="@id/etPwd" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:ems="10" android:layout_weight="1.0" android:inputType="textPassword" />
+</LinearLayout>

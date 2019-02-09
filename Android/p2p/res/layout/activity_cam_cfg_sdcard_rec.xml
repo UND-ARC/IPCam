@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strfun_sdcardrec" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <TextView android:textSize="15.0sp" android:id="@id/lbSCardStatus" android:layout_width="fill_parent" android:layout_height="25.0dip" android:layout_margin="5.0dip" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_rec_filelen" android:layout_weight="1.0" />
+                <ProgressBar android:id="@id/prgSDCardSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:progress="50" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+                <TextView android:textSize="14.0sp" android:gravity="right" android:id="@id/lbSDCardFree" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:gravity="right" android:id="@id/lbSDRecStu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbMoveDetLevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_rec_plan" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selRecord" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/timingRecLayShow" android:background="@color/clr_White" android:padding="@dimen/actBar_mgSld" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginRight="@dimen/actBar_mgSld">
+                    <Button android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/startTiming" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow" />
+                    <Button android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/endTiming" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/layRecReslu" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbReslution" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_rec_Resolution" android:layout_weight="1.0" />
+                    <Spinner android:id="@id/selReslution" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbAlarmInterval" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_rec_filelen" android:layout_weight="1.0" />
+                    <EditText android:id="@id/edFileLen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/str_rec_filelen_tip" android:ems="10" android:layout_weight="1.0" android:inputType="number">
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_rec_filelen_tip" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/llRecVoice" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_rec_voice" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkRecVoice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_rec_loop" android:layout_weight="1.0" />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkRecLoop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld" android:layout_marginBottom="10.0dip">
+                <Button android:id="@id/btnFormat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Format" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

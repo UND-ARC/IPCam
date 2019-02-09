@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layPlayerView" android:background="@color/clr_Black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/FrameLayout2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RadioButton android:textColor="@color/clr_White" android:id="@id/rdRecing" android:background="@color/clr_Black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="RadioButton" android:drawableLeft="@drawable/lb_rec" />
+        <com.g_zhang.p2pComm.opengl.GLESMyCamView android:layout_gravity="center_vertical" android:id="@id/liveImgView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/txt_sml" android:textColor="@color/clr_White" android:id="@id/lbMoveDetLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/txt_sml" android:textColor="@color/clr_White" android:id="@id/lbLiveTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/txt_sml" android:textColor="@color/clr_White" android:id="@id/lbLiveFps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="     ..............................." android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/imgLayShow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/lay_show" android:scaleType="fitXY" android:tint="@color/clr_White" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:id="@id/layCloudPlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/lbLiveFps">
+            <com.g_zhang.p2pComm.TimeLine.EsnTimeLineView android:id="@id/tml_CloudPlay" android:background="@color/clr_White" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_alignParentBottom="true" />
+            <RelativeLayout android:background="@color/clr_White" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_above="@id/tml_CloudPlay" android:layout_centerHorizontal="true">
+                <TextView android:textColor="@color/clr_Black" android:id="@id/lbCurrCloudTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                <RelativeLayout android:id="@id/layCurrDay" android:background="@drawable/bg_ripple" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                    <ImageView android:id="@id/imgCurr" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_action_calendar_mvp" android:scaleType="centerInside" android:tint="@color/clr_Black" android:contentDescription="@string/app_name" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/clr_Black" android:gravity="center" android:layout_gravity="center" android:id="@id/lbCurrDay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="13" android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <ImageView android:id="@id/imgCldDowmload" android:background="@color/clr_NULL" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cloud_download" android:scaleType="centerInside" android:layout_toRightOf="@id/layCurrDay" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/imgClose" android:background="@color/clr_NULL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/lay_close" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/imgCurrent" android:background="@color/clr_NULL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/actBar_mgSld" android:src="@drawable/cloud_current" android:scaleType="centerInside" android:layout_toLeftOf="@id/imgClose" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/frmLiveTool" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/clr_livetool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/imgLiveToolBrt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:src="@drawable/btn_brt" />
+                <ImageView android:id="@id/imgLiveToolCst" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:src="@drawable/btn_cst" />
+                <ImageView android:id="@id/imgLedToolCtl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:src="@drawable/btn_led_c" />
+                <ImageView android:id="@id/imgLed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/led_off" />
+                <ImageView android:id="@id/imgWRGBLed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_lamp" />
+                <ImageView android:id="@id/imgDecode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_decode" />
+                <ImageView android:id="@id/imgSMG" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_smg_a" />
+                <ImageView android:id="@id/imgPresetSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_preset_save" />
+                <ImageView android:id="@id/imgPresetGo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_preset_go" />
+                <Spinner android:id="@id/selLiveResolution" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/layToolBrt" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/imgLiveBrt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:src="@drawable/btn_brt" />
+                <SeekBar android:id="@id/sekLiveBrt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginRight="@dimen/toolleft_horizontal_margin" android:max="100" android:progress="50" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/layToolCst" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/tooltop_vertical_margin">
+                <ImageView android:id="@id/imgLiveCst" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:src="@drawable/btn_cst" />
+                <SeekBar android:id="@id/sekLiveCst" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginRight="@dimen/toolleft_horizontal_margin" android:max="100" android:progress="50" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/layLedCtl" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/tooltop_vertical_margin">
+                <ImageView android:id="@id/imgLedCtl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:src="@drawable/btn_led_c" />
+                <SeekBar android:id="@id/sekLed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginRight="@dimen/toolleft_horizontal_margin" android:max="100" android:progress="50" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:background="@color/clr_livetool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/imgLiveSpk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/voc_0" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveTalk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mic_0" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveSnapshot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_snp" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveRec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_rec" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLivePTZRH" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_ptzrlr" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLivePTZRV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_ptzrud" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveFlipH" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_fliph" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveFlipV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_flipv" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveTopMount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_topmount" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveWallMount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_wallmount" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveDeskMount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_deskmount" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgSwitchVRMode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_swmode" android:layout_weight="1.0" />
+                <ImageView android:id="@id/imgLiveBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_back" android:layout_weight="1.0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/btnChat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="44.0dip" android:src="@drawable/btn_talk0" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/layPreset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0dip" android:textStyle="bold" android:id="@id/lbPreset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Preset" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Button android:id="@id/btnPreset1" android:text="1" style="@style/live_preset_style" />
+                    <Button android:id="@id/btnPreset2" android:text="2" style="@style/live_preset_style" />
+                    <Button android:id="@id/btnPreset3" android:text="3" style="@style/live_preset_style" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Button android:id="@id/btnPreset4" android:text="4" style="@style/live_preset_style" />
+                    <Button android:id="@id/btnPreset5" android:text="5" style="@style/live_preset_style" />
+                    <Button android:id="@id/btnPreset6" android:text="6" style="@style/live_preset_style" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

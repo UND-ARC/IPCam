@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgLogo" android:layout_width="72.0dip" android:layout_height="50.0dip" android:layout_marginLeft="@dimen/toolleft_horizontal_margin" android:layout_marginTop="@dimen/tooltop_vertical_margin" android:src="@drawable/fun_alarm" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/str_Snapshot" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/imgLogo" android:layout_centerVertical="true">
+        <TextView android:textStyle="bold" android:textColor="@color/clr_Black" android:id="@id/lbItemName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_Name" android:contentDescription="@string/str_Name" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/imgMore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tooltop_vertical_margin" android:src="@drawable/btn_next" android:contentDescription="@string/str_Status" />
+    </LinearLayout>
+</RelativeLayout>

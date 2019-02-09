@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/clr_devMnuBg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layClose" android:background="@color/clr_livetool_bgalp" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="12.0sp" android:textColor="@color/clr_Black" android:id="@id/btnSelectAll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_SelectAll" android:drawableTop="@drawable/lstop_all" android:layout_weight="1.0" style="@style/live_button_style" />
+        <Button android:textSize="12.0sp" android:textColor="@color/clr_Black" android:id="@id/btnDel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_delete" android:drawableTop="@drawable/lstop_delet" android:layout_weight="1.0" style="@style/live_button_style" />
+        <Button android:textSize="12.0sp" android:textColor="@color/clr_Black" android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" android:drawableTop="@drawable/lstop_cancel" android:layout_weight="1.0" style="@style/live_button_style" />
+    </LinearLayout>
+</LinearLayout>

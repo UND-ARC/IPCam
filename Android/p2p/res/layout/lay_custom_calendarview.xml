@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/layRootPopwin" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/shape_popwin_bg_white" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_tool" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/layMonthDay" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/tv_month_day" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingTop="12.0dip" android:paddingRight="6.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/layMonthDay">
+                <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/tv_year" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/tv_lunar" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/fl_current" android:background="@drawable/bg_ripple" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/ib_calendar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_action_calendar_mvp" android:scaleType="centerInside" android:tint="#ff000000" android:contentDescription="@string/app_name" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_current_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="13" />
+            </FrameLayout>
+            <ImageView android:id="@id/imgClose" android:background="@color/clr_NULL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/lay_close" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.g_zhang.p2pComm.tools.CustomCalendarView.CalendarLayout android:orientation="vertical" android:id="@id/calendarLayout" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/rl_tool">
+            <com.g_zhang.p2pComm.tools.CustomCalendarView.CalendarView android:id="@id/calendarView" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" app:week_background="#ffffffff" app:week_line_background="#00000000" app:week_text_color="#ffe1e1e1" app:month_view="com.g_zhang.p2pComm.tools.CustomCalendarView.CustomMonthView" app:week_view="com.g_zhang.p2pComm.tools.CustomCalendarView.CustomWeekView" app:week_bar_height="26.0dip" app:week_bar_view="com.g_zhang.p2pComm.tools.CustomCalendarView.EnglishWeekBar" app:selected_theme_color="#ff046cea" app:selected_text_color="#ffffffff" app:year_view_month_text_size="20.0sp" app:year_view_day_text_size="9.0sp" app:year_view_month_text_color="#ffff0000" app:year_view_day_text_color="#ff333333" app:year_view_scheme_color="#fff17706" app:min_year="2004" app:max_year="2024" app:month_view_show_mode="mode_fix" app:week_start_with="mon" />
+        </com.g_zhang.p2pComm.tools.CustomCalendarView.CalendarLayout>
+    </RelativeLayout>
+</RelativeLayout>

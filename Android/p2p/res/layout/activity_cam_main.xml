@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="180.0dip">
+        <SurfaceView android:id="@id/vwCam" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="10.0dip">
+        <TextView android:gravity="center_horizontal" android:id="@id/lbCamStu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Camera ZGCS_AAAA0_0002 已启动" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/clr_TitleBar" android:layout_width="fill_parent" android:layout_height="180.0dip">
+        <ImageView android:id="@id/imageView1" android:background="@color/clr_TitleBar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="10.0dip">
+        <TextView android:gravity="center_horizontal" android:id="@id/lbRemoteStu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="远程视频 UID ZGCS_AAAA0_7190 Link ..." />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="启动双向" />
+    </LinearLayout>
+</LinearLayout>

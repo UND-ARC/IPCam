@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_DevSch" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioGroup android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/rdgrpSch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdTimer" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_SchTimer" android:drawableTop="@drawable/sch_timer" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdOneTime" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_SchOneTimes" android:drawableTop="@drawable/sch_one" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdDay" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_SchDay" android:drawableTop="@drawable/sch_day" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdWeek" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_SchWeek" android:drawableTop="@drawable/sch_week" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdMonth" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_SchMonth" android:drawableTop="@drawable/sch_month" android:layout_weight="1.0" />
+            </RadioGroup>
+            <LinearLayout android:orientation="vertical" android:id="@id/laySetTime" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layPlugOper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbPlugOper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_PlugOFF" android:layout_weight="1.0" />
+                    <TextView android:id="@id/lbRGBColor" android:background="@color/clr_White" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="      " />
+                    <com.g_zhang.p2pComm.EsnCheckBox android:id="@id/chkPlugOper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_off" />
+                </LinearLayout>
+                <Button android:id="@id/btnSetTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_TimeOper" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layWeek" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <TextView android:id="@id/lbRed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/tool_spl" android:text="@string/str_SchWeek" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkWeek0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchSunday" />
+                    <CheckBox android:id="@id/chkWeek1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchMonday" />
+                    <CheckBox android:id="@id/chkWeek2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchTuesday" />
+                    <CheckBox android:id="@id/chkWeek3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchWednesday" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkWeek4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchThursday" />
+                    <CheckBox android:id="@id/chkWeek5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchFriday" />
+                    <CheckBox android:id="@id/chkWeek6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SchSaturday" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layMonth" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/tool_spl" android:text="@string/str_SchMonth" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkMon1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 1" />
+                    <CheckBox android:id="@id/chkMon2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 2" />
+                    <CheckBox android:id="@id/chkMon3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 3" />
+                    <CheckBox android:id="@id/chkMon4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 4" />
+                    <CheckBox android:id="@id/chkMon5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 5" />
+                    <CheckBox android:id="@id/chkMon6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 6" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkMon7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 7" />
+                    <CheckBox android:id="@id/chkMon8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 8" />
+                    <CheckBox android:id="@id/chkMon9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 9" />
+                    <CheckBox android:id="@id/chkMon10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" />
+                    <CheckBox android:id="@id/chkMon11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkMon12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" />
+                    <CheckBox android:id="@id/chkMon13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="13" />
+                    <CheckBox android:id="@id/chkMon14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14" />
+                    <CheckBox android:id="@id/chkMon15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15" />
+                    <CheckBox android:id="@id/chkMon16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkMon17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="17" />
+                    <CheckBox android:id="@id/chkMon18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18" />
+                    <CheckBox android:id="@id/chkMon19" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="19" />
+                    <CheckBox android:id="@id/chkMon20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20" />
+                    <CheckBox android:id="@id/chkMon21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkMon22" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22" />
+                    <CheckBox android:id="@id/chkMon23" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23" />
+                    <CheckBox android:id="@id/chkMon24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="24" />
+                    <CheckBox android:id="@id/chkMon25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25" />
+                    <CheckBox android:id="@id/chkMon26" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="26" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/chkMon27" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27" />
+                    <CheckBox android:id="@id/chkMon28" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="28" />
+                    <CheckBox android:id="@id/chkMon29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="29" />
+                    <CheckBox android:id="@id/chkMon30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30" />
+                    <CheckBox android:id="@id/chkMon31" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="31" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layClockTime" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layClockAct" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRingTime" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ClockRingTime" android:layout_weight="3.0" />
+                    <EditText android:id="@id/edRingTime" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="10" android:layout_weight="2.0" android:inputType="number" />
+                    <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/str_Minutes" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layClockDelay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRingTimeDelay" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ClockRingInterval" android:layout_weight="3.0" />
+                    <EditText android:id="@id/edRingInterval" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="10" android:layout_weight="2.0" android:inputType="number" />
+                    <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/str_Minutes" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layClockRepeat" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/lbRingTimeRepeat" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:text="@string/str_ClockRingRepeast" android:layout_weight="3.0" />
+                    <EditText android:id="@id/edRingRepeeat" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="10" android:layout_weight="2.0" android:inputType="number" />
+                    <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/str_Times" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/laySetting" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

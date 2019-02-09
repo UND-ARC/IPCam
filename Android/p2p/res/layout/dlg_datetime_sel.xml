@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/LinearLayout2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <DatePicker android:id="@id/sel_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/tool_rht_mg" android:calendarViewShown="false" />
+    <TimePicker android:id="@id/sel_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

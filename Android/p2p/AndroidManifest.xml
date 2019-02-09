@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.g_zhang.myp2pcam" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="andorid.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.g_zhang.myp2pcam.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.g_zhang.myp2pcam.permission.C2D_MESSAGE"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:theme="@style/AppTheme">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.g_zhang.BaseESNApp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_list" android:name="com.g_zhang.BaseESNApp.CamListActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_detail" android:name="com.g_zhang.BaseESNApp.CamDetailActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_startup" android:name="com.g_zhang.BaseESNApp.StartupActivity"/>
+        <service android:icon="@drawable/ic_launcher" android:name="com.g_zhang.p2pComm.P2PCommSev" android:permission="android.permission.INTERNET"/>
+        <service android:name="com.g_zhang.p2pComm.GCM.ESNFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.g_zhang.p2pComm.GCM.ESNFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.g_zhang.p2pComm.GCM.ESNMsgJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_live" android:name="com.g_zhang.BaseESNApp.CamLiveActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_snapshot_view" android:name="com.g_zhang.BaseESNApp.CamSnapshotView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_record_view" android:name="com.g_zhang.BaseESNApp.CamRecordView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_alarm_view" android:name="com.g_zhang.BaseESNApp.CamAlarmView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_capture" android:name="com.g_zhang.BaseESNApp.CaptureActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_seh" android:name="com.g_zhang.BaseESNApp.CamSehActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_add_select" android:name="com.g_zhang.BaseESNApp.CamAddSelectAvtivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_wifisetup" android:name="com.g_zhang.BaseESNApp.WIFISetupActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_asf_player" android:name="com.g_zhang.BaseESNApp.AsfPlayerActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_config_fun" android:name="com.g_zhang.BaseESNApp.CamConfigFunActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_alarm" android:name="com.g_zhang.BaseESNApp.CamCfgAlarmActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_dev_wifi_setup" android:name="com.g_zhang.BaseESNApp.CamCfgDevWifiSetupActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_sdcard_rec" android:name="com.g_zhang.BaseESNApp.CamCfgSDCardRecActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_set_acc_pwd" android:name="com.g_zhang.BaseESNApp.CAmCfgSetAccPwdActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_ptz" android:name="com.g_zhang.BaseESNApp.CamCfgPTZActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_irled" android:name="com.g_zhang.BaseESNApp.CamCfgIRLedActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_ntp" android:name="com.g_zhang.BaseESNApp.CamCfgNTPActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_show4" android:name="com.g_zhang.BaseESNApp.CamShow4Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_email" android:name="com.g_zhang.BaseESNApp.CamCfgEMailActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_ftp" android:name="com.g_zhang.BaseESNApp.CamCfgFTPActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_ddns" android:name="com.g_zhang.BaseESNApp.CamCfgDDNSActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_user_grp" android:name="com.g_zhang.BaseESNApp.CamCfgUserGrpActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_user_item" android:name="com.g_zhang.BaseESNApp.CamCfgUserItemActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_plug_macin" android:name="com.g_zhang.BaseESNApp.PlugMacinActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_pulg_sch" android:name="com.g_zhang.BaseESNApp.PulgSchActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_light_main" android:name="com.g_zhang.BaseESNApp.LightMainActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_dev_sch_item" android:name="com.g_zhang.BaseESNApp.DevSchItemActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg433_m" android:name="com.g_zhang.BaseESNApp.CamCfg433MActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_cam_cfg_misc" android:name="com.g_zhang.BaseESNApp.CamCfgMiscActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_wifisetup" android:name="com.g_zhang.BaseESNApp.WIFISetupNextActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.g_zhang.BaseESNApp.CamCfgCloudActivity"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.g_zhang.myp2pcam"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.g_zhang.myp2pcam.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+    </application>
+</manifest>

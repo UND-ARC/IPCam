@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/laySch" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbSehCamera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_RecFiles" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/btnReSeh" android:background="@color/clr_NULL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/actBar_mgSld" android:src="@drawable/filter" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/str_Filter" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <Spinner android:id="@id/selRecSource" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ListView android:id="@id/lstRecordRecList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

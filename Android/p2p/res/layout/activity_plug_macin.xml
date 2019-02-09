@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:background="@color/clr_PlugBack" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_DevSwitch" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/btnFilter" android:background="@color/clr_NULL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/actBar_mgSld" android:src="@drawable/filter" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/str_Filter" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/grp_TopMg">
+        <ImageView android:id="@id/btn_sch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plug_sch" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/btn_Setup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plug_setup" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/btn_Pwd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chn_pwd" android:layout_toRightOf="@id/btn_Setup" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/btn_Plug" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/plug_off" android:scaleType="fitCenter" />
+    </LinearLayout>
+</LinearLayout>

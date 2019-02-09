@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:background="@color/clr_PlugBack" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:colorpicker="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_DevLight" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/btnBack" android:background="@color/clr_NULL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:src="@drawable/back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/str_Back" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/layTools" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/grp_TopMg">
+        <ImageView android:id="@id/btn_sch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plug_sch" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/btn_Setup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plug_setup" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/btn_Pwd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chn_pwd" android:layout_toRightOf="@id/btn_Setup" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/btn_Swh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_light_off" android:layout_toRightOf="@id/btn_Pwd" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/layColorItem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true" />
+        <LinearLayout android:layout_gravity="center" android:id="@id/layBrtWN" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_above="@id/layColorItem">
+            <ImageView android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/light_brtn" />
+            <SeekBar android:layout_gravity="center" android:id="@id/sekLedBrtNuan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:max="100" android:progress="100" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:id="@id/layBrt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/layBrtWN">
+            <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/light_brt" />
+            <SeekBar android:layout_gravity="center" android:id="@id/sekLedBrt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:max="100" android:progress="100" />
+        </LinearLayout>
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/btn_lampsw" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/es90_open" android:scaleType="fitCenter" android:layout_weight="1.0" android:layout_above="@id/layBrt" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_maintitle" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="@dimen/sz_title" android:textColor="@color/clr_White" android:id="@id/lbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_es90_pirmode" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/clr_tool_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioGroup android:orientation="vertical" android:id="@id/radioGroup1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip">
+                <RadioButton android:id="@id/rdPirTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_es90_pir_test" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rdPirAuto2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_es90_pir_auto2" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rdPirAuto6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_es90_pir_auto6" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rdPirD2D" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_es90_pir_DuskDawn" android:layout_weight="1.0" />
+            </RadioGroup>
+            <LinearLayout android:orientation="vertical" android:id="@id/layOK" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_OK" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/clr_ToolBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/actBar_mgSld" android:layout_marginTop="@dimen/grp_TopMg" android:layout_marginRight="@dimen/actBar_mgSld">
+                <Button android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/str_Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

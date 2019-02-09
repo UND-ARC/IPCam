@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@layout/activity_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/LayoutMain" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/LayoutTool" android:background="@drawable/bg_maintool" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_alignParentBottom="true">
+            <RadioGroup android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/grpRDTool" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdLive" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_LiveVideo" android:drawableTop="@drawable/live" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdSnapShot" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_Snapshot" android:drawableTop="@drawable/snapshot" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdRecord" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_Rec" android:drawableTop="@drawable/rec" android:layout_weight="1.0" />
+                <RadioButton android:textSize="11.0sp" android:textColor="@color/clr_tabtxt" android:gravity="center" android:id="@id/rdAlarm" android:background="@color/clr_NULL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/str_Alarm" android:drawableTop="@drawable/alarm" android:layout_weight="1.0" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/layClient" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/LayoutTool" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/layStartup" android:background="@drawable/startup" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

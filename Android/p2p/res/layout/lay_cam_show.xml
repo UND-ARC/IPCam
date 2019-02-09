@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layShowBG" android:background="@color/clr_tabbg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgLive" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip" android:scaleType="fitXY" />
+    <com.g_zhang.p2pComm.opengl.GLESMyCamView android:id="@id/surfaceLive" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip" />
+    <RelativeLayout android:id="@id/layTools" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/imgBtnInfor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/btn_info" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/imgBtnVoc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:src="@drawable/tool_voc0" android:layout_toLeftOf="@id/imgBtnInfor" android:layout_alignTop="@id/imgBtnInfor" />
+        <ImageView android:id="@id/imgBtnAdd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_add_w" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/progBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</FrameLayout>
