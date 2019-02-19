@@ -1,0 +1,3 @@
+[submodule "firmware/_firmware_image.bin.extracted/firmware-mod-kit"]
+	path = firmware/_firmware_image.bin.extracted/firmware-mod-kit
+	url = git@github.com:rampageX/firmware-mod-kit.git
