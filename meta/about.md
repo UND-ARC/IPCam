@@ -69,3 +69,15 @@ See [datasheets folder](https://github.com/UND-ARC/IPCam/tree/master/datasheets)
 00037AC8   3D 36 30 00  69 72 73 77  5F 64 69 73  61 62 6C 65  3D 31 00 69  72 5F 6C 65  64 3D 31 00  76 6F 6C 5F  6D 69 63 3D  31 32 30 00  =60.irsw_disable=1.ir_led=1.vol_mic=120.
 00037AF0   76 6F 6C 5F  73 70 6B 3D  31 32 30 00  76 6F 6C 5F  6D 69 63 67  61 69 6E 3D  34 30 00 00  00 00 00 00  00 00 00 00  00 00 00 00  vol_spk=120.vol_micgain=40..............
 ```
+* The file `firmware/_firmware_image.bin.extracted/7E7D66` contains interesting stuff, seems to be a file index of sorts.  All the `asp` filenames that have been dumped to `cam_src/` are present here.
+* The best target file seems to be `firmware/image_fmk_extracted/image_parts/rootfs.img/mylib/load_sta.sh`.  It appears to be responsible for loading the device into station mode from AP mode.  It is a shell script and pretty empty as-is:
+```bash
+#!/bin/sh
+
+insmod /mylib/mtutil7601Usta.ko
+insmod /mylib/mt7601Usta.ko
+insmod /mylib/mtnet7601Usta.ko
+
+ifconfig ra0 up
+```
+
