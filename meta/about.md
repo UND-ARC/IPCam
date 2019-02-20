@@ -52,8 +52,8 @@ See [datasheets folder](https://github.com/UND-ARC/IPCam/tree/master/datasheets)
 ## Interesting firmware analysis finds
 
 * The bootargs command line: `bootargs=mem=32M console=ttyAMA0,115200 root=/dev/mtdblock4 rootfstype=squashfs mtdparts=hi_sfc:256k(boot),128k(env),128k(conf),2560k(os),5120k(rootfs)^@bootcmd=sf probe 0;sf read 0x82000000 0x80000 0x280000;bootm 0x82000000^@bootdelay=0^@baudrate=115200^@ethaddr=00:00:23:34:45:66^@ipaddr=192.168.1.101^@serverip=192.168.1.231^@netmask=255.255.255.0^@bootfile="uImage"`
-  * This was found in the file `firmware/_firmware_image.bin.extracted/28
-* This string in the hexdump:
+  * This was found in the file `firmware/_firmware_image.bin.extracted/286DA.lzo`
+* This string in the hexdump (of the same file, `286DA.lzo`), some of which also appears in the webif I believe:
 ```
 00037910   FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF 74 27  41 61 70 32  70 5F 73 65  76 31 3D 31  32 30 2E 32  ......................t'Aap2p_sev1=120.2
 00037938   37 2E 37 2E  37 38 00 70  32 70 5F 73  65 76 32 3D  34 37 2E 38  38 2E 39 2E  31 39 31 00  70 32 70 5F  73 65 76 33  3D 68 7A 71  7.7.78.p2p_sev2=47.88.9.191.p2p_sev3=hzq
