@@ -1,0 +1,21 @@
+
+Scan Time:     2019-02-19 16:52:56
+Target File:   /mnt/shared/ARC/IPCam/firmware/firmware_image.bin
+MD5 Checksum:  5131449c214a6aecb0952414cd75fe4f
+Signatures:    344
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+159932        0x270BC         CRC32 polynomial table, little endian
+165594        0x286DA         LZO compressed data
+524288        0x80000         uImage header, header size: 64 bytes, header CRC: 0xFFF3AC6F, created: 2016-11-19 09:04:35, image size: 2440984 bytes, Data Address: 0x80008000, Entry Point: 0x80008000, data CRC: 0xC2F2AEA9, OS: Linux, CPU: ARM, image type: OS Kernel Image, compression type: none, image name: "Linux-3.4.35"
+542188        0x845EC         gzip compressed data, maximum compression, from Unix, NULL date (1970-01-01 00:00:00)
+3145728       0x300000        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 5093290 bytes, 835 inodes, blocksize: 65536 bytes, created: 2017-10-08 09:04:42
+8283970       0x7E6742        xz compressed data
+8285532       0x7E6D5C        xz compressed data
+8287638       0x7E7596        xz compressed data
+8289144       0x7E7B78        xz compressed data
+8289638       0x7E7D66        xz compressed data
+8293252       0x7E8B84        xz compressed data
+8296706       0x7E9902        xz compressed data
+8297052       0x7E9A5C        xz compressed data
+
